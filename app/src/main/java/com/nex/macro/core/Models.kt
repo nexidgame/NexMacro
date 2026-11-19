@@ -28,6 +28,9 @@ class MacroTarget(
     /** True bila target dimatikan otomatis oleh "Disable After" (tidak disimpan). */
     var autoDisabled: Boolean = false
 
+    /** Salinan independen (tanpa state eksekusi). */
+    fun duplicate(): MacroTarget = fromJson(toJson())
+
     fun toJson(): JSONObject = JSONObject().apply {
         put("type", type.name)
         put("x", x); put("y", y); put("x2", x2); put("y2", y2)

@@ -20,8 +20,6 @@ object Prefs {
     // ---- Mode target tunggal ----
     var singleInterval by IntPref("s_interval", 100)
     var singleDuration by IntPref("s_duration", 25)
-    var singleStopCount by IntPref("s_stop_count", 0)
-    var singleStopSeconds by IntPref("s_stop_seconds", 0)
     var singlePauseOnAppChange by BoolPref("s_pause_app", false)
     var singleCorner by IntPref("s_corner", 0)
     var singleX by IntPref("s_x", -1)
@@ -31,8 +29,6 @@ object Prefs {
     var multiStartDelay by IntPref("m_start_delay", 0)
     var multiEndDelay by IntPref("m_end_delay", 100)
     var multiDuration by IntPref("m_duration", 25)
-    var multiStopCount by IntPref("m_stop_count", 0)
-    var multiStopSeconds by IntPref("m_stop_seconds", 0)
     var multiRadius by IntPref("m_radius", 0)
     var multiShowActive by BoolPref("m_show_active", true)
     var multiProgrammability by BoolPref("m_programmability", true)
@@ -40,6 +36,14 @@ object Prefs {
     var panelX by IntPref("m_panel_x", -1)
     var panelY by IntPref("m_panel_y", -1)
     var currentConfig by StringPref("m_current_config", "")
+
+    var singleStop: StopRule
+        get() = StopRule.fromString(sp.getString("s_stop_rule", null))
+        set(value) = sp.edit { putString("s_stop_rule", value.toJson().toString()) }
+
+    var multiStop: StopRule
+        get() = StopRule.fromString(sp.getString("m_stop_rule", null))
+        set(value) = sp.edit { putString("m_stop_rule", value.toJson().toString()) }
 
     // ---- Umum / Auto Start ----
     var lastMode by StringPref("last_mode", "multi")

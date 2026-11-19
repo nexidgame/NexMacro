@@ -31,6 +31,8 @@
         <activity android:name=".SettingsActivity" android:exported="false" />
         <activity android:name=".InstructionsActivity" android:exported="false" />
         <activity android:name=".AutoStartActivity" android:exported="false" />
+        <activity android:name=".ConfigListActivity" android:exported="false" />
+        <activity android:name=".ConfigEditActivity" android:exported="false" />
 
         <service
             android:name=".service.ClickerService"

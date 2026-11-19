@@ -193,7 +193,8 @@ class SingleOverlay(private val svc: ClickerService) {
             running = false
             if (attached) render()
         }
-        engine.start(Prefs.singleStopCount, Prefs.singleStopSeconds) {
+        val rule = Prefs.singleStop
+        engine.start(rule.runLimit(), rule.durationSeconds(), rule.atMillis()) {
             val p = clickPoint()
             Step(
                 startDelay = 0,

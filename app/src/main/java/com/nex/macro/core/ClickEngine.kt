@@ -29,13 +29,19 @@ class ClickEngine(private val service: AccessibilityService) {
     private var startedAt = 0L
     private var stopCount = 0
     private var stopSeconds = 0
+    private var stopAtMillis = 0L
     private var source: (() -> Step?)? = null
 
-    /** @param stopCount 0 = tanpa batas. @param stopSeconds 0 = tanpa batas. */
-    fun start(stopCount: Int, stopSeconds: Int, source: () -> Step?) {
+    /**
+     * @param stopCount 0 = tanpa batas (jumlah eksekusi).
+     * @param stopSeconds 0 = tanpa batas (lama berjalan).
+     * @param stopAtMillis 0 = tanpa batas (waktu henti absolut, epoch ms).
+     */
+    fun start(stopCount: Int, stopSeconds: Int, stopAtMillis: Long = 0L, source: () -> Step?) {
         if (running) return
         this.stopCount = stopCount
         this.stopSeconds = stopSeconds
+        this.stopAtMillis = stopAtMillis
         this.source = source
         executed = 0
         startedAt = SystemClock.elapsedRealtime()
@@ -56,6 +62,7 @@ class ClickEngine(private val service: AccessibilityService) {
     private fun limitReached(): Boolean {
         if (stopCount > 0 && executed >= stopCount) return true
         if (stopSeconds > 0 && SystemClock.elapsedRealtime() - startedAt >= stopSeconds * 1000L) return true
+        if (stopAtMillis > 0 && System.currentTimeMillis() >= stopAtMillis) return true
         return false
     }
 

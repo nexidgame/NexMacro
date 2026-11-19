@@ -6,8 +6,8 @@ Auto clicker & macro modern untuk Android 11 – 16 (`com.nex.macro`).
 - **Mode Target Tunggal** – overlay bar `[geser | ▶ | ✕ | geser]`, ketuk sisi untuk ganti sudut klik, bar hijau saat berjalan.
 - **Mode Multi Target** – panel ▶ ＋ － ⚙ ›; target bernomor berurutan, target **geser (swipe)** (tahan ＋), ciutkan overlay, pindahkan panel (tahan ›).
 - **Edit per target** – jeda awal/akhir, durasi, ulangi, nonaktifkan setelah N kali, radius acak, aktif/nonaktif, hapus.
-- **Konfigurasi** – simpan / muat / perbarui / hapus konfigurasi bernama.
-- **Stop After** (jumlah klik dan/atau detik), **Pause On App Change**, **Show Active Targets**, **Target Programmability**.
+- **Konfigurasi** – simpan / muat / perbarui dari overlay, plus layar **Konfigurasi Tersimpan** (lihat di layar 👁, ubah ✏️, salin, hapus, tombol ＋) dan editor konfigurasi: ganti nama, daftar aksi yang bisa diurutkan dengan tarik, ubah posisi/jeda tiap aksi, salin & hapus aksi.
+- **Stop After** 4 pemicu: tanpa batas, setelah N menit, pada jam tertentu, atau setelah N putaran; **Pause On App Change**, **Show Active Targets**, **Target Programmability**.
 - **Auto Start** – pilih aplikasi yang memunculkan overlay (dan opsional langsung mengetuk) saat dibuka.
 - Penghentian darurat saat layar mati, halaman petunjuk, UI gelap modern (Material 3), Bahasa Indonesia & Inggris.
 

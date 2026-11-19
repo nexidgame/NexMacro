@@ -67,14 +67,12 @@ object ConfigDialogs {
         }
 
         val stopRow = UiKit.row(
-            ctx, ctx.getString(R.string.s_stop_after),
-            UiKit.stopText(ctx, Prefs.multiStopCount, Prefs.multiStopSeconds)
+            ctx, ctx.getString(R.string.s_stop_after), UiKit.stopText(ctx, Prefs.multiStop)
         ) {}
         stopRow.view.setOnClickListener {
-            Dialogs.stopAfter(ctx, overlay, Prefs.multiStopCount, Prefs.multiStopSeconds) { c, s ->
-                Prefs.multiStopCount = c
-                Prefs.multiStopSeconds = s
-                stopRow.setValue(UiKit.stopText(ctx, c, s))
+            Dialogs.stopRule(ctx, overlay, Prefs.multiStop) { r ->
+                Prefs.multiStop = r
+                stopRow.setValue(UiKit.stopText(ctx, r))
             }
         }
 
@@ -88,7 +86,7 @@ object ConfigDialogs {
             val has = cur.isNotEmpty() && ConfigStore.exists(ctx, cur)
             nameTv.text = if (has) cur else ctx.getString(R.string.cfg_none)
             btnUpdate.visibility = if (has) View.VISIBLE else View.GONE
-            stopRow.setValue(UiKit.stopText(ctx, Prefs.multiStopCount, Prefs.multiStopSeconds))
+            stopRow.setValue(UiKit.stopText(ctx, Prefs.multiStop))
         }
         refresh()
 
@@ -97,7 +95,7 @@ object ConfigDialogs {
         }
         btnSave.setOnClickListener {
             Dialogs.text(ctx, overlay, ctx.getString(R.string.cfg_name_prompt)) { name ->
-                ConfigStore.save(ctx, name, getTargets(), Prefs.multiStopCount, Prefs.multiStopSeconds)
+                ConfigStore.save(ctx, name, getTargets(), Prefs.multiStop)
                 Prefs.currentConfig = name
                 Toast.makeText(ctx, R.string.cfg_saved, Toast.LENGTH_SHORT).show()
                 refresh()
@@ -106,7 +104,7 @@ object ConfigDialogs {
         btnUpdate.setOnClickListener {
             val name = Prefs.currentConfig
             if (name.isNotEmpty()) {
-                ConfigStore.save(ctx, name, getTargets(), Prefs.multiStopCount, Prefs.multiStopSeconds)
+                ConfigStore.save(ctx, name, getTargets(), Prefs.multiStop)
                 Toast.makeText(ctx, R.string.cfg_updated, Toast.LENGTH_SHORT).show()
             }
         }
@@ -133,8 +131,7 @@ object ConfigDialogs {
                 .setPositiveButton(R.string.load) { _, _ ->
                     ConfigStore.load(ctx, name)?.let { cfg ->
                         Prefs.currentConfig = name
-                        Prefs.multiStopCount = cfg.stopCount
-                        Prefs.multiStopSeconds = cfg.stopSeconds
+                        Prefs.multiStop = cfg.stop
                         onLoaded(cfg)
                         Toast.makeText(ctx, R.string.cfg_loaded, Toast.LENGTH_SHORT).show()
                         after()
@@ -149,23 +146,6 @@ object ConfigDialogs {
                 .setNeutralButton(R.string.cancel, null)
                 .create()
             Dialogs.show(d, overlay)
-        }
-    }
-
-    /** Dari layar pengaturan: lihat & hapus konfigurasi tersimpan. */
-    fun showManage(ctx: Context) {
-        val names = ConfigStore.names(ctx)
-        if (names.isEmpty()) {
-            Toast.makeText(ctx, R.string.cfg_empty, Toast.LENGTH_SHORT).show()
-            return
-        }
-        Dialogs.items(ctx, false, ctx.getString(R.string.cfg_manage_title), names) { i ->
-            val name = names[i]
-            Dialogs.confirm(ctx, false, ctx.getString(R.string.cfg_delete_q, name)) {
-                ConfigStore.delete(ctx, name)
-                if (Prefs.currentConfig == name) Prefs.currentConfig = ""
-                Toast.makeText(ctx, R.string.cfg_deleted, Toast.LENGTH_SHORT).show()
-            }
         }
     }
 }

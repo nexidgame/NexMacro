@@ -22,7 +22,10 @@ object TargetDialog {
         fun onChanged()
     }
 
-    fun show(ctx: Context, overlay: Boolean, number: Int, t: MacroTarget, programmable: Boolean, cb: Callbacks) {
+    fun show(
+        ctx: Context, overlay: Boolean, number: Int, t: MacroTarget, programmable: Boolean, cb: Callbacks,
+        showCoordinates: Boolean = false,
+    ) {
         val swipe = t.type == TargetType.SWIPE
         val content = LinearLayout(ctx).apply {
             orientation = LinearLayout.VERTICAL
@@ -68,6 +71,25 @@ object TargetDialog {
             Dialogs.confirm(ctx, overlay, ctx.getString(R.string.delete_target_q)) {
                 dialog.dismiss()
                 cb.onRemove()
+            }
+        }
+
+        if (showCoordinates) {
+            content.addView(UiKit.header(ctx, ctx.getString(R.string.sec_position)))
+            fun coord(title: Int, get: () -> Int, set: (Int) -> Unit) {
+                val row = UiKit.row(ctx, ctx.getString(title), UiKit.px(ctx, get())) {}
+                row.view.setOnClickListener {
+                    Dialogs.number(ctx, overlay, ctx.getString(title), ctx.getString(R.string.hint_px), get(), 0, 10_000) { v ->
+                        set(v); row.setValue(UiKit.px(ctx, v)); cb.onChanged()
+                    }
+                }
+                content.addView(row.view)
+            }
+            coord(R.string.s_pos_x, { t.x }, { t.x = it })
+            coord(R.string.s_pos_y, { t.y }, { t.y = it })
+            if (swipe) {
+                coord(R.string.s_pos_x2, { t.x2 }, { t.x2 = it })
+                coord(R.string.s_pos_y2, { t.y2 }, { t.y2 = it })
             }
         }
 

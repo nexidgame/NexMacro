@@ -5,9 +5,9 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.nex.macro.core.Prefs
+import com.nex.macro.core.StopRule
 import com.nex.macro.databinding.ActivitySettingsBinding
 import com.nex.macro.service.ClickerService
-import com.nex.macro.ui.ConfigDialogs
 import com.nex.macro.ui.Dialogs
 import com.nex.macro.ui.UiKit
 import com.nex.macro.ui.applySystemBarsPadding
@@ -48,12 +48,12 @@ class SettingsActivity : AppCompatActivity() {
         return row
     }
 
-    private fun stopRow(count: () -> Int, seconds: () -> Int, set: (Int, Int) -> Unit): UiKit.SettingRow {
-        val row = UiKit.row(this, getString(R.string.s_stop_after), UiKit.stopText(this, count(), seconds())) {}
+    private fun stopRow(get: () -> StopRule, set: (StopRule) -> Unit): UiKit.SettingRow {
+        val row = UiKit.row(this, getString(R.string.s_stop_after), UiKit.stopText(this, get())) {}
         row.view.setOnClickListener {
-            Dialogs.stopAfter(this, false, count(), seconds()) { c, s ->
-                set(c, s)
-                row.setValue(UiKit.stopText(this, c, s))
+            Dialogs.stopRule(this, false, get()) { r ->
+                set(r)
+                row.setValue(UiKit.stopText(this, r))
             }
         }
         return row
@@ -64,9 +64,7 @@ class SettingsActivity : AppCompatActivity() {
         c.addView(UiKit.header(this, getString(R.string.sec_basic)))
         c.addView(numberRow(R.string.s_time_between, { Prefs.singleInterval }, 3_600_000, { Prefs.singleInterval = it }).view)
         c.addView(numberRow(R.string.s_click_duration, { Prefs.singleDuration }, 60_000, { Prefs.singleDuration = it }).view)
-        c.addView(stopRow({ Prefs.singleStopCount }, { Prefs.singleStopSeconds }) { n, s ->
-            Prefs.singleStopCount = n; Prefs.singleStopSeconds = s
-        }.view)
+        c.addView(stopRow({ Prefs.singleStop }, { Prefs.singleStop = it }).view)
         c.addView(UiKit.header(this, getString(R.string.sec_advanced)))
         c.addView(
             UiKit.switchRow(
@@ -83,9 +81,7 @@ class SettingsActivity : AppCompatActivity() {
         c.addView(numberRow(R.string.s_start_delay, { Prefs.multiStartDelay }, 3_600_000, { Prefs.multiStartDelay = it }).view)
         c.addView(numberRow(R.string.s_end_delay, { Prefs.multiEndDelay }, 3_600_000, { Prefs.multiEndDelay = it }).view)
         c.addView(numberRow(R.string.s_swipe_duration, { Prefs.multiDuration }, 60_000, { Prefs.multiDuration = it }).view)
-        c.addView(stopRow({ Prefs.multiStopCount }, { Prefs.multiStopSeconds }) { n, s ->
-            Prefs.multiStopCount = n; Prefs.multiStopSeconds = s
-        }.view)
+        c.addView(stopRow({ Prefs.multiStop }, { Prefs.multiStop = it }).view)
 
         c.addView(UiKit.header(this, getString(R.string.sec_randomization)))
         c.addView(
@@ -121,7 +117,9 @@ class SettingsActivity : AppCompatActivity() {
                 val m = UiKit.dp(this@SettingsActivity, 16)
                 it.setMargins(m, m, m, 0)
             }
-            setOnClickListener { ConfigDialogs.showManage(this@SettingsActivity) }
+            setOnClickListener {
+                startActivity(android.content.Intent(this@SettingsActivity, ConfigListActivity::class.java))
+            }
         }
         c.addView(manage)
         c.addView(speedWarning())

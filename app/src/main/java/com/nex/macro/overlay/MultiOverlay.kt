@@ -77,6 +77,9 @@ class MultiOverlay(private val svc: ClickerService) {
     private var cursor = 0
     private var current: MacroTarget? = null
     private var repeatLeft = 0
+    private var lastPicked = -1
+    private var cycles = 0
+    private var runLimit = 0
 
     // =============================================================== tampil / sembunyi
 
@@ -94,8 +97,7 @@ class MultiOverlay(private val svc: ClickerService) {
 
         if (autoLoad && Prefs.currentConfig.isNotEmpty()) {
             ConfigStore.load(ctx, Prefs.currentConfig)?.let { cfg ->
-                Prefs.multiStopCount = cfg.stopCount
-                Prefs.multiStopSeconds = cfg.stopSeconds
+                Prefs.multiStop = cfg.stop
                 replaceTargets(cfg.targets)
             }
         }
@@ -447,6 +449,10 @@ class MultiOverlay(private val svc: ClickerService) {
         cursor = 0
         current = null
         repeatLeft = 0
+        lastPicked = -1
+        cycles = 0
+        val rule = Prefs.multiStop
+        runLimit = rule.runLimit()
         running = true
         applyState()
         svc.beginRun()
@@ -465,7 +471,7 @@ class MultiOverlay(private val svc: ClickerService) {
                 applyState()
             }
         }
-        engine.start(Prefs.multiStopCount, Prefs.multiStopSeconds) { nextStep() }
+        engine.start(0, rule.durationSeconds(), rule.atMillis()) { nextStep() }
     }
 
     private fun stopRun() {
@@ -493,9 +499,16 @@ class MultiOverlay(private val svc: ClickerService) {
         }
         val n = list.size
         for (i in 0 until n) {
-            val t = list[(cursor + i) % n]
+            val k = (cursor + i) % n
+            val t = list[k]
             if (t.enabled) {
-                cursor = (cursor + i + 1) % n
+                // k <= lastPicked berarti satu putaran penuh sudah selesai
+                if (k <= lastPicked) {
+                    cycles++
+                    if (runLimit > 0 && cycles >= runLimit) return null
+                }
+                lastPicked = k
+                cursor = (k + 1) % n
                 current = t
                 repeatLeft = if (prog) t.repeat.coerceAtLeast(0) else 0
                 return execute(t, prog)

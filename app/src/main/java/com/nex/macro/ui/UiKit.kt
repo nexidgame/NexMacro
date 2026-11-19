@@ -99,12 +99,11 @@ object UiKit {
     fun onOff(ctx: Context, on: Boolean): String =
         ctx.getString(if (on) R.string.val_enabled else R.string.val_disabled)
 
-    fun stopText(ctx: Context, count: Int, seconds: Int): String {
-        if (count <= 0 && seconds <= 0) return ctx.getString(R.string.val_infinite)
-        val parts = mutableListOf<String>()
-        if (count > 0) parts += ctx.getString(R.string.val_count, count)
-        if (seconds > 0) parts += ctx.getString(R.string.val_seconds, seconds)
-        return parts.joinToString(" / ")
+    fun stopText(ctx: Context, rule: com.nex.macro.core.StopRule): String = when (rule.mode) {
+        com.nex.macro.core.StopRule.DURATION -> ctx.getString(R.string.val_minutes, rule.minutes)
+        com.nex.macro.core.StopRule.AT_TIME -> String.format(java.util.Locale.US, "%02d:%02d", rule.hour, rule.minute)
+        com.nex.macro.core.StopRule.RUN_COUNT -> ctx.getString(R.string.val_runs, rule.runs)
+        else -> ctx.getString(R.string.val_infinite)
     }
 }
 

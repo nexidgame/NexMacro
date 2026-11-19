@@ -12,7 +12,9 @@ import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 import com.nex.macro.core.ClickEngine
 import com.nex.macro.core.Prefs
+import com.nex.macro.core.MacroTarget
 import com.nex.macro.overlay.MultiOverlay
+import com.nex.macro.overlay.PreviewOverlay
 import com.nex.macro.overlay.SingleOverlay
 
 /**
@@ -38,6 +40,7 @@ class ClickerService : AccessibilityService() {
     private val handler = Handler(Looper.getMainLooper())
     private var single: SingleOverlay? = null
     private var multi: MultiOverlay? = null
+    private var preview: PreviewOverlay? = null
 
     var foregroundPkg: String? = null
         private set
@@ -88,6 +91,17 @@ class ClickerService : AccessibilityService() {
         multi?.hide()
         single = null
         multi = null
+    }
+
+    /** Tampilkan target (nomor, posisi) di layar sebagai pratinjau yang tidak bisa disentuh. */
+    fun showPreview(items: List<Pair<Int, MacroTarget>>) {
+        preview?.hide()
+        preview = PreviewOverlay(this).also { it.show(items) }
+    }
+
+    fun clearPreview() {
+        preview?.hide()
+        preview = null
     }
 
     /** Dipanggil overlay saat mulai menjalankan klik. */
@@ -148,6 +162,7 @@ class ClickerService : AccessibilityService() {
 
     private fun cleanup() {
         if (::engine.isInitialized) hideOverlays()
+        clearPreview()
         if (receiverRegistered) {
             runCatching { unregisterReceiver(screenOffReceiver) }
             receiverRegistered = false
