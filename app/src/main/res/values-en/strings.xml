@@ -99,33 +99,6 @@
     <string name="autostart_click_desc">Run clicks right away when a chosen app opens</string>
     <string name="autostart_hint">Tick the apps that should show the Nex Macro overlay automatically (uses the last mode you used).</string>
     <string name="instr_title">Instructions</string>
-    <string name="instr_single_html"><![CDATA[<h3>Single Target Mode</h3>
-<p>Please take a moment to read these instructions.</p>
-<h4>Moving the overlay</h4>
-<p><b>Drag</b> the left or right side of the bar to move it anywhere.</p>
-<h4>Changing the click corner</h4>
-<p><b>Tap</b> a side of the bar to change which corner clicks happen at. The active corner is marked by a triangle on the bar and a blue ring on screen. The click lands just outside that corner, so you can click in any corner of the screen.</p>
-<h4>Starting and stopping</h4>
-<p>Press ▶: the bar turns green and starts clicking. You cannot move the overlay while running; press ⏸ to pause.</p>
-<h4>Emergency stop</h4>
-<p>Locking the phone or turning the screen off stops the app. If the phone freezes, press the power button once.</p>
-<h4>Closing the overlay</h4>
-<p>Tap the ✕ symbol to close the overlay and stop the app.</p>]]></string>
-    <string name="instr_multi_html"><![CDATA[<h3>Multi Target Mode</h3>
-<p>Please take a moment to read these instructions.</p>
-<h4>Using the overlay</h4>
-<p>The panel has five buttons whose function differs between tap and hold:</p>
-<p>▶ <b>Tap:</b> start / stop clicking.<br>
-＋ <b>Tap:</b> add a click target. <b>Hold:</b> add a swipe target.<br>
-－ <b>Tap:</b> remove the last target. <b>Hold:</b> remove all targets.<br>
-⚙ <b>Tap:</b> open options and configurations.<br>
-› <b>Tap:</b> collapse all overlays (a ✕ button appears to close). <b>Hold then drag:</b> reposition the panel.</p>
-<h4>Adding targets</h4>
-<p>Each target is numbered and runs in sequence. Clicks/swipes originate from the target's center. After the last target the sequence loops back to the first.</p>
-<h4>Configuring a target</h4>
-<p>Tap a target to set its start delay, end delay, duration, repeat, disable-after and randomization radius.</p>
-<h4>Swipe targets</h4>
-<p>Holding the ＋ button adds a swipe target: it swipes from the circle labeled "start" to the circle labeled "end".</p>
-<h4>Proper settings</h4>
-<p>Your phone and its apps have limits on how fast they can be tapped. Clicking faster than 50 milliseconds may cause an app not to register the click or lock up your phone. If that happens, lock your phone or turn off the screen to stop, then change the configuration.</p>]]></string>
+    <string name="instr_single_html">&lt;h3&gt;Single Target Mode&lt;/h3&gt; &lt;p&gt;Please take a moment to read these instructions.&lt;/p&gt; &lt;h4&gt;Moving the overlay&lt;/h4&gt; &lt;p&gt;&lt;b&gt;Drag&lt;/b&gt; the left or right side of the bar to move it anywhere.&lt;/p&gt; &lt;h4&gt;Changing the click corner&lt;/h4&gt; &lt;p&gt;&lt;b&gt;Tap&lt;/b&gt; a side of the bar to change which corner clicks happen at. The active corner is marked by a triangle on the bar and a blue ring on screen. The click lands just outside that corner, so you can click in any corner of the screen.&lt;/p&gt; &lt;h4&gt;Starting and stopping&lt;/h4&gt; &lt;p&gt;Press ▶: the bar turns green and starts clicking. You cannot move the overlay while running; press ⏸ to pause.&lt;/p&gt; &lt;h4&gt;Emergency stop&lt;/h4&gt; &lt;p&gt;Locking the phone or turning the screen off stops the app. If the phone freezes, press the power button once.&lt;/p&gt; &lt;h4&gt;Closing the overlay&lt;/h4&gt; &lt;p&gt;Tap the ✕ symbol to close the overlay and stop the app.&lt;/p&gt;</string>
+    <string name="instr_multi_html">&lt;h3&gt;Multi Target Mode&lt;/h3&gt; &lt;p&gt;Please take a moment to read these instructions.&lt;/p&gt; &lt;h4&gt;Using the overlay&lt;/h4&gt; &lt;p&gt;The panel has five buttons whose function differs between tap and hold:&lt;/p&gt; &lt;p&gt;▶ &lt;b&gt;Tap:&lt;/b&gt; start / stop clicking.&lt;br&gt; ＋ &lt;b&gt;Tap:&lt;/b&gt; add a click target. &lt;b&gt;Hold:&lt;/b&gt; add a swipe target.&lt;br&gt; － &lt;b&gt;Tap:&lt;/b&gt; remove the last target. &lt;b&gt;Hold:&lt;/b&gt; remove all targets.&lt;br&gt; ⚙ &lt;b&gt;Tap:&lt;/b&gt; open options and configurations.&lt;br&gt; › &lt;b&gt;Tap:&lt;/b&gt; collapse all overlays (a ✕ button appears to close). &lt;b&gt;Hold then drag:&lt;/b&gt; reposition the panel.&lt;/p&gt; &lt;h4&gt;Adding targets&lt;/h4&gt; &lt;p&gt;Each target is numbered and runs in sequence. Clicks/swipes originate from the target’s center. After the last target the sequence loops back to the first.&lt;/p&gt; &lt;h4&gt;Configuring a target&lt;/h4&gt; &lt;p&gt;Tap a target to set its start delay, end delay, duration, repeat, disable-after and randomization radius.&lt;/p&gt; &lt;h4&gt;Swipe targets&lt;/h4&gt; &lt;p&gt;Holding the ＋ button adds a swipe target: it swipes from the circle labeled “start” to the circle labeled “end”.&lt;/p&gt; &lt;h4&gt;Proper settings&lt;/h4&gt; &lt;p&gt;Your phone and its apps have limits on how fast they can be tapped. Clicking faster than 50 milliseconds may cause an app not to register the click or lock up your phone. If that happens, lock your phone or turn off the screen to stop, then change the configuration.&lt;/p&gt;</string>
 </resources>

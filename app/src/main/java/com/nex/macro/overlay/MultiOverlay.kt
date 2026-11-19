@@ -104,10 +104,15 @@ class MultiOverlay(private val svc: ClickerService) {
     fun hide() {
         attached = false
         removeAllEntries()
-        for (v in listOf<View?>(panel.takeIf { ::panel.isInitialized }, lineView.takeIf { ::lineView.isInitialized })) {
-            if (v == null) continue
+        if (::panel.isInitialized) {
             try {
-                wm.removeViewImmediate(v)
+                wm.removeViewImmediate(panel)
+            } catch (_: Exception) {
+            }
+        }
+        if (::lineView.isInitialized) {
+            try {
+                wm.removeViewImmediate(lineView)
             } catch (_: Exception) {
             }
         }

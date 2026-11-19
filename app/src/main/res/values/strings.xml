@@ -99,33 +99,6 @@
     <string name="autostart_click_desc">Langsung jalankan klik saat aplikasi pilihan dibuka</string>
     <string name="autostart_hint">Centang aplikasi yang akan memunculkan overlay Nex Macro secara otomatis (memakai mode terakhir yang dipakai).</string>
     <string name="instr_title">Petunjuk</string>
-    <string name="instr_single_html"><![CDATA[<h3>Mode Target Tunggal</h3>
-<p>Luangkan waktu sebentar untuk membaca petunjuk ini.</p>
-<h4>Memindahkan overlay</h4>
-<p><b>Geser</b> sisi kiri atau kanan bar untuk memindahkannya ke mana saja.</p>
-<h4>Mengganti sudut klik</h4>
-<p><b>Ketuk</b> sisi bar untuk mengganti sudut tempat klik terjadi. Sudut aktif ditandai segitiga di bar dan cincin biru di layar. Titik klik berada tepat di luar sudut itu, sehingga Anda bisa mengklik di sudut mana pun.</p>
-<h4>Mulai dan berhenti</h4>
-<p>Tekan tombol ▶: bar berubah hijau dan mulai mengetuk. Overlay tidak bisa dipindahkan saat berjalan; tekan ⏸ untuk menjeda.</p>
-<h4>Penghentian darurat</h4>
-<p>Mengunci ponsel atau mematikan layar akan menghentikan aplikasi. Jika ponsel macet, tekan tombol daya sekali.</p>
-<h4>Menutup overlay</h4>
-<p>Ketuk simbol ✕ untuk menutup overlay dan menghentikan aplikasi.</p>]]></string>
-    <string name="instr_multi_html"><![CDATA[<h3>Mode Multi Target</h3>
-<p>Luangkan waktu sebentar untuk membaca petunjuk ini.</p>
-<h4>Memakai overlay</h4>
-<p>Panel punya lima tombol; fungsinya berbeda bila diketuk atau ditahan:</p>
-<p>▶ <b>Ketuk:</b> mulai / hentikan klik.<br>
-＋ <b>Ketuk:</b> tambah target klik. <b>Tahan:</b> tambah target geser.<br>
-－ <b>Ketuk:</b> hapus target terakhir. <b>Tahan:</b> hapus semua target.<br>
-⚙ <b>Ketuk:</b> buka opsi dan konfigurasi.<br>
-› <b>Ketuk:</b> ciutkan semua overlay (tombol ✕ muncul untuk menutup). <b>Tahan lalu geser:</b> pindahkan panel.</p>
-<h4>Menambah target</h4>
-<p>Setiap target bernomor dan dijalankan berurutan. Klik/geser berawal dari pusat target. Setelah target terakhir, urutan kembali ke yang pertama.</p>
-<h4>Mengatur target</h4>
-<p>Ketuk sebuah target untuk mengatur jeda awal, jeda akhir, durasi, pengulangan, nonaktif setelah N kali, dan radius acak.</p>
-<h4>Target geser</h4>
-<p>Menahan tombol ＋ menambah target geser: bergeser dari lingkaran "awal" ke lingkaran "akhir".</p>
-<h4>Pengaturan yang tepat</h4>
-<p>Ponsel dan aplikasi punya batas seberapa cepat bisa diketuk. Klik lebih cepat dari 50 milidetik dapat membuat aplikasi tidak mendeteksi ketukan atau membuat ponsel macet. Bila terjadi, kunci ponsel atau matikan layar untuk menghentikan, lalu ubah konfigurasi.</p>]]></string>
+    <string name="instr_single_html">&lt;h3&gt;Mode Target Tunggal&lt;/h3&gt; &lt;p&gt;Luangkan waktu sebentar untuk membaca petunjuk ini.&lt;/p&gt; &lt;h4&gt;Memindahkan overlay&lt;/h4&gt; &lt;p&gt;&lt;b&gt;Geser&lt;/b&gt; sisi kiri atau kanan bar untuk memindahkannya ke mana saja.&lt;/p&gt; &lt;h4&gt;Mengganti sudut klik&lt;/h4&gt; &lt;p&gt;&lt;b&gt;Ketuk&lt;/b&gt; sisi bar untuk mengganti sudut tempat klik terjadi. Sudut aktif ditandai segitiga di bar dan cincin biru di layar. Titik klik berada tepat di luar sudut itu, sehingga Anda bisa mengklik di sudut mana pun.&lt;/p&gt; &lt;h4&gt;Mulai dan berhenti&lt;/h4&gt; &lt;p&gt;Tekan tombol ▶: bar berubah hijau dan mulai mengetuk. Overlay tidak bisa dipindahkan saat berjalan; tekan ⏸ untuk menjeda.&lt;/p&gt; &lt;h4&gt;Penghentian darurat&lt;/h4&gt; &lt;p&gt;Mengunci ponsel atau mematikan layar akan menghentikan aplikasi. Jika ponsel macet, tekan tombol daya sekali.&lt;/p&gt; &lt;h4&gt;Menutup overlay&lt;/h4&gt; &lt;p&gt;Ketuk simbol ✕ untuk menutup overlay dan menghentikan aplikasi.&lt;/p&gt;</string>
+    <string name="instr_multi_html">&lt;h3&gt;Mode Multi Target&lt;/h3&gt; &lt;p&gt;Luangkan waktu sebentar untuk membaca petunjuk ini.&lt;/p&gt; &lt;h4&gt;Memakai overlay&lt;/h4&gt; &lt;p&gt;Panel punya lima tombol; fungsinya berbeda bila diketuk atau ditahan:&lt;/p&gt; &lt;p&gt;▶ &lt;b&gt;Ketuk:&lt;/b&gt; mulai / hentikan klik.&lt;br&gt; ＋ &lt;b&gt;Ketuk:&lt;/b&gt; tambah target klik. &lt;b&gt;Tahan:&lt;/b&gt; tambah target geser.&lt;br&gt; － &lt;b&gt;Ketuk:&lt;/b&gt; hapus target terakhir. &lt;b&gt;Tahan:&lt;/b&gt; hapus semua target.&lt;br&gt; ⚙ &lt;b&gt;Ketuk:&lt;/b&gt; buka opsi dan konfigurasi.&lt;br&gt; › &lt;b&gt;Ketuk:&lt;/b&gt; ciutkan semua overlay (tombol ✕ muncul untuk menutup). &lt;b&gt;Tahan lalu geser:&lt;/b&gt; pindahkan panel.&lt;/p&gt; &lt;h4&gt;Menambah target&lt;/h4&gt; &lt;p&gt;Setiap target bernomor dan dijalankan berurutan. Klik/geser berawal dari pusat target. Setelah target terakhir, urutan kembali ke yang pertama.&lt;/p&gt; &lt;h4&gt;Mengatur target&lt;/h4&gt; &lt;p&gt;Ketuk sebuah target untuk mengatur jeda awal, jeda akhir, durasi, pengulangan, nonaktif setelah N kali, dan radius acak.&lt;/p&gt; &lt;h4&gt;Target geser&lt;/h4&gt; &lt;p&gt;Menahan tombol ＋ menambah target geser: bergeser dari lingkaran “awal” ke lingkaran “akhir”.&lt;/p&gt; &lt;h4&gt;Pengaturan yang tepat&lt;/h4&gt; &lt;p&gt;Ponsel dan aplikasi punya batas seberapa cepat bisa diketuk. Klik lebih cepat dari 50 milidetik dapat membuat aplikasi tidak mendeteksi ketukan atau membuat ponsel macet. Bila terjadi, kunci ponsel atau matikan layar untuk menghentikan, lalu ubah konfigurasi.&lt;/p&gt;</string>
 </resources>
