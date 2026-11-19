@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nex Macro</string>
+    <string name="tagline">Auto clicker &amp; macro modern</string>
+    <string name="accessibility_description">Nex Macro memakai layanan ini untuk mengetuk dan menggeser layar sesuai pengaturan yang Anda buat, serta menampilkan overlay kontrol. Tidak ada data layar yang dikumpulkan atau dikirim ke mana pun.</string>
+    <string name="status_on">Layanan aktif</string>
+    <string name="status_off">Layanan belum aktif</string>
+    <string name="status_on_desc">Nex Macro siap mengetuk dan menggeser layar.</string>
+    <string name="status_off_desc">Aktifkan Nex Macro di Pengaturan Aksesibilitas agar bisa mengetuk layar.</string>
+    <string name="btn_enable_service">Aktifkan layanan</string>
+    <string name="btn_service_settings">Pengaturan aksesibilitas</string>
+    <string name="mode_single">Mode Target Tunggal</string>
+    <string name="mode_single_desc">Satu titik ketuk dengan overlay ringkas. Cocok untuk klik cepat berulang.</string>
+    <string name="mode_multi">Mode Multi Target</string>
+    <string name="mode_multi_desc">Rangkai banyak ketukan dan geseran yang dijalankan berurutan.</string>
+    <string name="btn_start">Mulai</string>
+    <string name="btn_auto_start">Auto Start Aplikasi</string>
+    <string name="auto_start_desc">Munculkan overlay otomatis saat aplikasi pilihan dibuka.</string>
+    <string name="cd_info">Petunjuk</string>
+    <string name="cd_settings">Pengaturan</string>
+    <string name="version_fmt">Versi %1$s</string>
+    <string name="dialog_service_title">Aktifkan layanan aksesibilitas</string>
+    <string name="dialog_service_msg">Nex Macro membutuhkan layanan aksesibilitas untuk mengetuk dan menggeser layar. Pada layar berikutnya pilih \"Nex Macro\" lalu aktifkan.\n\nAndroid 13 ke atas: bila opsinya abu-abu (aplikasi dipasang dari luar Play Store), buka Info Aplikasi Nex Macro, ketuk menu ⋮ lalu pilih \"Izinkan pengaturan terbatas\".</string>
+    <string name="btn_go_settings">Buka pengaturan</string>
+    <string name="toast_overlay_started">Overlay aktif. Buka aplikasi target lalu tekan ▶.</string>
+    <string name="toast_add_target_first">Tambahkan atau aktifkan minimal satu target dulu.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="close">Tutup</string>
+    <string name="save">Simpan</string>
+    <string name="load">Muat</string>
+    <string name="update">Perbarui</string>
+    <string name="delete">Hapus</string>
+    <string name="yes">Ya</string>
+    <string name="settings_title_single">Pengaturan – Target Tunggal</string>
+    <string name="settings_title_multi">Pengaturan – Multi Target</string>
+    <string name="sec_default">Pengaturan bawaan</string>
+    <string name="sec_basic">Pengaturan dasar</string>
+    <string name="sec_advanced">Pengaturan lanjutan</string>
+    <string name="sec_randomization">Pengacakan</string>
+    <string name="s_time_between">Jeda antar klik</string>
+    <string name="s_click_duration">Durasi klik</string>
+    <string name="s_stop_after">Berhenti setelah</string>
+    <string name="s_pause_app">Jeda saat ganti aplikasi</string>
+    <string name="s_pause_app_desc">Hentikan otomatis bila aplikasi di layar berubah</string>
+    <string name="s_start_delay">Jeda awal</string>
+    <string name="s_end_delay">Jeda akhir</string>
+    <string name="s_swipe_duration">Durasi klik/geser</string>
+    <string name="s_radius">Radius acak</string>
+    <string name="s_show_active">Tampilkan target aktif</string>
+    <string name="s_show_active_desc">Target tetap terlihat dan menyala saat berjalan</string>
+    <string name="s_programmability">Pemrograman target</string>
+    <string name="s_programmability_desc">Tiap target punya jeda, ulangi, dan batas sendiri</string>
+    <string name="s_manage">Kelola konfigurasi</string>
+    <string name="s_repeat">Ulangi</string>
+    <string name="s_disable_after">Nonaktifkan setelah</string>
+    <string name="val_ms">%1$d milidetik</string>
+    <string name="val_px">%1$d piksel</string>
+    <string name="val_infinite">∞</string>
+    <string name="val_count">%1$d kali</string>
+    <string name="val_seconds">%1$d detik</string>
+    <string name="val_enabled">Aktif</string>
+    <string name="val_disabled">Nonaktif</string>
+    <string name="val_no_repeat">Jangan diulang</string>
+    <string name="val_repeat_fmt">Ulangi %1$d kali</string>
+    <string name="val_no_disable">Jangan dinonaktifkan</string>
+    <string name="val_disable_after_fmt">Nonaktif setelah %1$d eksekusi</string>
+    <string name="hint_ms">Milidetik</string>
+    <string name="hint_px">Piksel</string>
+    <string name="hint_repeat">Jumlah pengulangan (0 = tidak)</string>
+    <string name="hint_disable_after">Jumlah eksekusi (0 = tidak)</string>
+    <string name="hint_stop_count">Berhenti setelah N klik</string>
+    <string name="hint_stop_seconds">Berhenti setelah N detik</string>
+    <string name="zero_infinite">Isi 0 untuk tanpa batas (∞). Bila keduanya diisi, mana yang tercapai lebih dulu akan menghentikan.</string>
+    <string name="speed_warning">Catatan: klik lebih cepat dari 50 milidetik bisa membuat aplikasi tidak mendeteksi ketukan atau membuat ponsel macet. Bila terjadi, kunci layar untuk menghentikan lalu ubah pengaturan.</string>
+    <string name="edit_target_fmt">Edit target: %1$d</string>
+    <string name="edit_swipe_fmt">Edit geseran: %1$d</string>
+    <string name="btn_remove">Hapus</string>
+    <string name="btn_enabled">Aktif</string>
+    <string name="btn_disabled">Nonaktif</string>
+    <string name="delete_target_q">Hapus target ini?</string>
+    <string name="programmability_off_note">Pemrograman target dimatikan. Semua target memakai nilai bawaan dari Pengaturan – Multi Target. Nyalakan di sana untuk mengatur tiap target.</string>
+    <string name="label_start">awal</string>
+    <string name="label_end">akhir</string>
+    <string name="cfg_title">Pengaturan</string>
+    <string name="cfg_current">Konfigurasi saat ini</string>
+    <string name="cfg_none">Tidak ada</string>
+    <string name="cfg_name_prompt">Beri nama konfigurasi ini:</string>
+    <string name="cfg_empty">Belum ada konfigurasi tersimpan</string>
+    <string name="cfg_load_confirm">Muat \"%1$s\"? Target yang ada sekarang akan diganti.</string>
+    <string name="cfg_saved">Konfigurasi disimpan</string>
+    <string name="cfg_updated">Konfigurasi diperbarui</string>
+    <string name="cfg_loaded">Konfigurasi dimuat</string>
+    <string name="cfg_deleted">Konfigurasi dihapus</string>
+    <string name="cfg_manage_title">Kelola konfigurasi</string>
+    <string name="cfg_delete_q">Hapus konfigurasi \"%1$s\"?</string>
+    <string name="autostart_title">Auto Start</string>
+    <string name="autostart_click">Mulai mengetuk otomatis</string>
+    <string name="autostart_click_desc">Langsung jalankan klik saat aplikasi pilihan dibuka</string>
+    <string name="autostart_hint">Centang aplikasi yang akan memunculkan overlay Nex Macro secara otomatis (memakai mode terakhir yang dipakai).</string>
+    <string name="instr_title">Petunjuk</string>
+    <string name="instr_single_html"><![CDATA[<h3>Mode Target Tunggal</h3>
+<p>Luangkan waktu sebentar untuk membaca petunjuk ini.</p>
+<h4>Memindahkan overlay</h4>
+<p><b>Geser</b> sisi kiri atau kanan bar untuk memindahkannya ke mana saja.</p>
+<h4>Mengganti sudut klik</h4>
+<p><b>Ketuk</b> sisi bar untuk mengganti sudut tempat klik terjadi. Sudut aktif ditandai segitiga di bar dan cincin biru di layar. Titik klik berada tepat di luar sudut itu, sehingga Anda bisa mengklik di sudut mana pun.</p>
+<h4>Mulai dan berhenti</h4>
+<p>Tekan tombol ▶: bar berubah hijau dan mulai mengetuk. Overlay tidak bisa dipindahkan saat berjalan; tekan ⏸ untuk menjeda.</p>
+<h4>Penghentian darurat</h4>
+<p>Mengunci ponsel atau mematikan layar akan menghentikan aplikasi. Jika ponsel macet, tekan tombol daya sekali.</p>
+<h4>Menutup overlay</h4>
+<p>Ketuk simbol ✕ untuk menutup overlay dan menghentikan aplikasi.</p>]]></string>
+    <string name="instr_multi_html"><![CDATA[<h3>Mode Multi Target</h3>
+<p>Luangkan waktu sebentar untuk membaca petunjuk ini.</p>
+<h4>Memakai overlay</h4>
+<p>Panel punya lima tombol; fungsinya berbeda bila diketuk atau ditahan:</p>
+<p>▶ <b>Ketuk:</b> mulai / hentikan klik.<br>
+＋ <b>Ketuk:</b> tambah target klik. <b>Tahan:</b> tambah target geser.<br>
+－ <b>Ketuk:</b> hapus target terakhir. <b>Tahan:</b> hapus semua target.<br>
+⚙ <b>Ketuk:</b> buka opsi dan konfigurasi.<br>
+› <b>Ketuk:</b> ciutkan semua overlay (tombol ✕ muncul untuk menutup). <b>Tahan lalu geser:</b> pindahkan panel.</p>
+<h4>Menambah target</h4>
+<p>Setiap target bernomor dan dijalankan berurutan. Klik/geser berawal dari pusat target. Setelah target terakhir, urutan kembali ke yang pertama.</p>
+<h4>Mengatur target</h4>
+<p>Ketuk sebuah target untuk mengatur jeda awal, jeda akhir, durasi, pengulangan, nonaktif setelah N kali, dan radius acak.</p>
+<h4>Target geser</h4>
+<p>Menahan tombol ＋ menambah target geser: bergeser dari lingkaran "awal" ke lingkaran "akhir".</p>
+<h4>Pengaturan yang tepat</h4>
+<p>Ponsel dan aplikasi punya batas seberapa cepat bisa diketuk. Klik lebih cepat dari 50 milidetik dapat membuat aplikasi tidak mendeteksi ketukan atau membuat ponsel macet. Bila terjadi, kunci ponsel atau matikan layar untuk menghentikan, lalu ubah konfigurasi.</p>]]></string>
+</resources>

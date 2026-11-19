@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nex Macro</string>
+    <string name="tagline">Modern auto clicker &amp; macro</string>
+    <string name="accessibility_description">Nex Macro uses this service to tap and swipe the screen according to the settings you create, and to show its control overlay. No screen data is collected or sent anywhere.</string>
+    <string name="status_on">Service active</string>
+    <string name="status_off">Service not active</string>
+    <string name="status_on_desc">Nex Macro is ready to tap and swipe the screen.</string>
+    <string name="status_off_desc">Enable Nex Macro in Accessibility settings so it can tap the screen.</string>
+    <string name="btn_enable_service">Enable service</string>
+    <string name="btn_service_settings">Accessibility settings</string>
+    <string name="mode_single">Single Target Mode</string>
+    <string name="mode_single_desc">One tap point with a compact overlay. Great for fast repeated clicks.</string>
+    <string name="mode_multi">Multi Target Mode</string>
+    <string name="mode_multi_desc">Chain many taps and swipes that run in sequence.</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_auto_start">Auto Start Apps</string>
+    <string name="auto_start_desc">Show the overlay automatically when a chosen app opens.</string>
+    <string name="cd_info">Instructions</string>
+    <string name="cd_settings">Settings</string>
+    <string name="version_fmt">Version %1$s</string>
+    <string name="dialog_service_title">Enable accessibility service</string>
+    <string name="dialog_service_msg">Nex Macro needs the accessibility service to tap and swipe the screen. On the next screen choose \"Nex Macro\" and turn it on.\n\nAndroid 13 and up: if the option is greyed out (app installed outside Play Store), open Nex Macro\'s App Info, tap the ⋮ menu and choose \"Allow restricted settings\".</string>
+    <string name="btn_go_settings">Open settings</string>
+    <string name="toast_overlay_started">Overlay active. Open the target app and press ▶.</string>
+    <string name="toast_add_target_first">Add or enable at least one target first.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="save">Save</string>
+    <string name="load">Load</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="settings_title_single">Settings – Single Target</string>
+    <string name="settings_title_multi">Settings – Multi Target</string>
+    <string name="sec_default">Default settings</string>
+    <string name="sec_basic">Basic settings</string>
+    <string name="sec_advanced">Advanced settings</string>
+    <string name="sec_randomization">Randomization</string>
+    <string name="s_time_between">Time between clicks</string>
+    <string name="s_click_duration">Click duration</string>
+    <string name="s_stop_after">Stop after</string>
+    <string name="s_pause_app">Pause on app change</string>
+    <string name="s_pause_app_desc">Stop automatically when the foreground app changes</string>
+    <string name="s_start_delay">Start delay</string>
+    <string name="s_end_delay">End delay</string>
+    <string name="s_swipe_duration">Click/swipe duration</string>
+    <string name="s_radius">Randomization radius</string>
+    <string name="s_show_active">Show active targets</string>
+    <string name="s_show_active_desc">Targets stay visible and light up while running</string>
+    <string name="s_programmability">Target programmability</string>
+    <string name="s_programmability_desc">Each target gets its own delays, repeat and limits</string>
+    <string name="s_manage">Manage configurations</string>
+    <string name="s_repeat">Repeat</string>
+    <string name="s_disable_after">Disable after</string>
+    <string name="val_ms">%1$d millisecond(s)</string>
+    <string name="val_px">%1$d pixel(s)</string>
+    <string name="val_infinite">∞</string>
+    <string name="val_count">%1$d time(s)</string>
+    <string name="val_seconds">%1$d second(s)</string>
+    <string name="val_enabled">Enabled</string>
+    <string name="val_disabled">Disabled</string>
+    <string name="val_no_repeat">Do not repeat</string>
+    <string name="val_repeat_fmt">Repeat %1$d time(s)</string>
+    <string name="val_no_disable">Do not disable</string>
+    <string name="val_disable_after_fmt">Disable after %1$d run(s)</string>
+    <string name="hint_ms">Milliseconds</string>
+    <string name="hint_px">Pixels</string>
+    <string name="hint_repeat">Repeat count (0 = none)</string>
+    <string name="hint_disable_after">Run count (0 = never)</string>
+    <string name="hint_stop_count">Stop after N clicks</string>
+    <string name="hint_stop_seconds">Stop after N seconds</string>
+    <string name="zero_infinite">Enter 0 for unlimited (∞). If both are set, whichever is reached first stops the run.</string>
+    <string name="speed_warning">Note: clicking faster than 50 milliseconds may cause an app to miss taps or freeze the phone. If that happens, lock the screen to stop, then change the settings.</string>
+    <string name="edit_target_fmt">Edit target: %1$d</string>
+    <string name="edit_swipe_fmt">Edit swipe: %1$d</string>
+    <string name="btn_remove">Remove</string>
+    <string name="btn_enabled">Enabled</string>
+    <string name="btn_disabled">Disabled</string>
+    <string name="delete_target_q">Delete this target?</string>
+    <string name="programmability_off_note">Target programmability is off. Every target uses the defaults from Settings – Multi Target. Turn it on there to configure each target.</string>
+    <string name="label_start">start</string>
+    <string name="label_end">end</string>
+    <string name="cfg_title">Settings</string>
+    <string name="cfg_current">Current configuration</string>
+    <string name="cfg_none">None</string>
+    <string name="cfg_name_prompt">Set a name for this configuration:</string>
+    <string name="cfg_empty">No saved configurations yet</string>
+    <string name="cfg_load_confirm">Load \"%1$s\"? Current targets will be replaced.</string>
+    <string name="cfg_saved">Configuration saved</string>
+    <string name="cfg_updated">Configuration updated</string>
+    <string name="cfg_loaded">Configuration loaded</string>
+    <string name="cfg_deleted">Configuration deleted</string>
+    <string name="cfg_manage_title">Manage configurations</string>
+    <string name="cfg_delete_q">Delete configuration \"%1$s\"?</string>
+    <string name="autostart_title">Auto Start</string>
+    <string name="autostart_click">Start clicking automatically</string>
+    <string name="autostart_click_desc">Run clicks right away when a chosen app opens</string>
+    <string name="autostart_hint">Tick the apps that should show the Nex Macro overlay automatically (uses the last mode you used).</string>
+    <string name="instr_title">Instructions</string>
+    <string name="instr_single_html"><![CDATA[<h3>Single Target Mode</h3>
+<p>Please take a moment to read these instructions.</p>
+<h4>Moving the overlay</h4>
+<p><b>Drag</b> the left or right side of the bar to move it anywhere.</p>
+<h4>Changing the click corner</h4>
+<p><b>Tap</b> a side of the bar to change which corner clicks happen at. The active corner is marked by a triangle on the bar and a blue ring on screen. The click lands just outside that corner, so you can click in any corner of the screen.</p>
+<h4>Starting and stopping</h4>
+<p>Press ▶: the bar turns green and starts clicking. You cannot move the overlay while running; press ⏸ to pause.</p>
+<h4>Emergency stop</h4>
+<p>Locking the phone or turning the screen off stops the app. If the phone freezes, press the power button once.</p>
+<h4>Closing the overlay</h4>
+<p>Tap the ✕ symbol to close the overlay and stop the app.</p>]]></string>
+    <string name="instr_multi_html"><![CDATA[<h3>Multi Target Mode</h3>
+<p>Please take a moment to read these instructions.</p>
+<h4>Using the overlay</h4>
+<p>The panel has five buttons whose function differs between tap and hold:</p>
+<p>▶ <b>Tap:</b> start / stop clicking.<br>
+＋ <b>Tap:</b> add a click target. <b>Hold:</b> add a swipe target.<br>
+－ <b>Tap:</b> remove the last target. <b>Hold:</b> remove all targets.<br>
+⚙ <b>Tap:</b> open options and configurations.<br>
+› <b>Tap:</b> collapse all overlays (a ✕ button appears to close). <b>Hold then drag:</b> reposition the panel.</p>
+<h4>Adding targets</h4>
+<p>Each target is numbered and runs in sequence. Clicks/swipes originate from the target's center. After the last target the sequence loops back to the first.</p>
+<h4>Configuring a target</h4>
+<p>Tap a target to set its start delay, end delay, duration, repeat, disable-after and randomization radius.</p>
+<h4>Swipe targets</h4>
+<p>Holding the ＋ button adds a swipe target: it swipes from the circle labeled "start" to the circle labeled "end".</p>
+<h4>Proper settings</h4>
+<p>Your phone and its apps have limits on how fast they can be tapped. Clicking faster than 50 milliseconds may cause an app not to register the click or lock up your phone. If that happens, lock your phone or turn off the screen to stop, then change the configuration.</p>]]></string>
+</resources>
