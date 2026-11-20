@@ -15,6 +15,6 @@
     <color name="danger">#EF4444</color>
     <color name="on_surface">#0F1B33</color>
     <color name="on_surface_variant">#5B6B88</color>
-    <color name="ic_launcher_background_start">#9CCBFF</color>
-    <color name="ic_launcher_background_end">#5AA2FF</color>
+    <color name="ic_launcher_background_start">#62B4FF</color>
+    <color name="ic_launcher_background_end">#2F7BF5</color>
 </resources>
