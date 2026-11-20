@@ -16,7 +16,7 @@ class LineView(context: Context) : View(context) {
     private var segments: List<FloatArray> = emptyList()
     private val d = resources.displayMetrics.density
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#CC22D3EE")
+        color = Color.parseColor("#CC2563EB")
         style = Paint.Style.STROKE
         strokeWidth = 3f * d
         strokeCap = Paint.Cap.ROUND

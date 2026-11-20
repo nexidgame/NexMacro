@@ -131,7 +131,7 @@ class SingleOverlay(private val svc: ClickerService) {
     private fun buildDot() {
         dotBg = GradientDrawable().apply {
             shape = GradientDrawable.OVAL
-            setColor(Color.parseColor("#3322D3EE"))
+            setColor(Color.parseColor("#332563EB"))
             setStroke(UiKit.dp(ctx, 3), NexColors.SECONDARY)
         }
         dot = View(ctx).apply { background = dotBg }
@@ -173,7 +173,7 @@ class SingleOverlay(private val svc: ClickerService) {
         bg.setColor(if (running) NexColors.SUCCESS_BG else NexColors.SURFACE)
         bg.setStroke(UiKit.dp(ctx, 2), if (running) NexColors.SUCCESS else NexColors.PRIMARY)
         dotBg.setStroke(UiKit.dp(ctx, 3), if (running) NexColors.SUCCESS else NexColors.SECONDARY)
-        dotBg.setColor(Color.parseColor(if (running) "#3334D399" else "#3322D3EE"))
+        dotBg.setColor(Color.parseColor(if (running) "#3322C55E" else "#332563EB"))
         root.invalidate()
     }
 
@@ -226,7 +226,7 @@ class SingleOverlay(private val svc: ClickerService) {
         var corner: Int = 0
             set(value) { field = value; invalidate() }
         private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = Color.parseColor("#22D3EE")
+            color = Color.parseColor("#2563EB")
             style = Paint.Style.FILL
         }
 

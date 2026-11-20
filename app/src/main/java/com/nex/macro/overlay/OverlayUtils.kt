@@ -14,13 +14,14 @@ import android.widget.ImageView
 import com.nex.macro.ui.UiKit
 
 object NexColors {
-    val SURFACE: Int = Color.parseColor("#F2131A2B")
-    val PRIMARY: Int = Color.parseColor("#8B6CFF")
-    val SECONDARY: Int = Color.parseColor("#22D3EE")
-    val SUCCESS: Int = Color.parseColor("#34D399")
-    val SUCCESS_BG: Int = Color.parseColor("#F20F3D2E")
-    val WHITE: Int = Color.WHITE
-    val MUTED: Int = Color.parseColor("#9AA7C7")
+    // Latar putih ~90% opak (agak transparan), garis biru lembut, ikon biru tua
+    val SURFACE: Int = Color.parseColor("#E6FFFFFF")
+    val PRIMARY: Int = Color.parseColor("#F23B82F6")
+    val SECONDARY: Int = Color.parseColor("#2563EB")
+    val SUCCESS: Int = Color.parseColor("#22C55E")
+    val SUCCESS_BG: Int = Color.parseColor("#E6DCFCE7")
+    val ICON: Int = Color.parseColor("#1E3A8A")
+    val MUTED: Int = Color.parseColor("#7C8DB0")
 }
 
 object OverlayUtils {
@@ -64,11 +65,11 @@ object OverlayUtils {
     fun iconButton(ctx: Context, iconRes: Int, sizeDp: Int): ImageButton = ImageButton(ctx).apply {
         setImageResource(iconRes)
         scaleType = ImageView.ScaleType.CENTER_INSIDE
-        imageTintList = ColorStateList.valueOf(NexColors.WHITE)
+        imageTintList = ColorStateList.valueOf(NexColors.ICON)
         val pad = UiKit.dp(ctx, 12)
         setPadding(pad, pad, pad, pad)
         background = RippleDrawable(
-            ColorStateList.valueOf(Color.parseColor("#44FFFFFF")),
+            ColorStateList.valueOf(Color.parseColor("#333B82F6")),
             null,
             GradientDrawable().apply { shape = GradientDrawable.OVAL; setColor(Color.WHITE) },
         )

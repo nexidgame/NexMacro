@@ -39,8 +39,8 @@ object TargetDialog {
         }
         val btnRemove = MaterialButton(ctx).apply {
             setText(R.string.btn_remove)
-            backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(ctx, R.color.warning))
-            setTextColor(Color.BLACK)
+            backgroundTintList = ColorStateList.valueOf(Color.parseColor("#FEE2E2"))
+            setTextColor(Color.parseColor("#B91C1C"))
             layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
                 .also { it.marginEnd = UiKit.dp(ctx, 8) }
         }
@@ -52,7 +52,9 @@ object TargetDialog {
             btnEnabled.backgroundTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(ctx, if (t.enabled) R.color.primary else R.color.outline)
             )
-            btnEnabled.setTextColor(Color.WHITE)
+            btnEnabled.setTextColor(
+                if (t.enabled) Color.WHITE else ContextCompat.getColor(ctx, R.color.on_surface_variant)
+            )
         }
         renderEnabled()
         btnRow.addView(btnRemove)

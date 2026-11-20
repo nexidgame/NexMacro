@@ -244,6 +244,9 @@ class ConfigEditActivity : AppCompatActivity() {
                     if (previewIdx == position) R.color.primary else R.color.surface_high,
                 )
             )
+            holder.vb.btnPreview.iconTint = ColorStateList.valueOf(
+                ContextCompat.getColor(this@ConfigEditActivity, if (previewIdx == position) R.color.on_primary else R.color.on_surface)
+            )
             holder.vb.btnPreview.setOnClickListener {
                 holder.bindingAdapterPosition.takeIf { it >= 0 }?.let { togglePreview(it) }
             }

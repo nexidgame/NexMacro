@@ -46,9 +46,9 @@ class TargetView(context: Context) : View(context) {
 
         val (f, s) = when {
             !targetEnabled -> Color.parseColor("#33888888") to Color.parseColor("#99AAAAAA")
-            active -> Color.parseColor("#9934D399") to Color.parseColor("#FF34D399")
-            isEnd -> Color.parseColor("#5522D3EE") to Color.parseColor("#FF67E8F9")
-            else -> Color.parseColor("#557C5CFF") to Color.parseColor("#FFB8A9FF")
+            active -> Color.parseColor("#9922C55E") to Color.parseColor("#FF16A34A")
+            isEnd -> Color.parseColor("#5560A5FA") to Color.parseColor("#FF1D4ED8")
+            else -> Color.parseColor("#553B82F6") to Color.parseColor("#FF2563EB")
         }
         fill.color = f
         stroke.color = s

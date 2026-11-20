@@ -127,6 +127,9 @@ class ConfigListActivity : AppCompatActivity() {
             holder.vb.btnPreview.backgroundTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(this@ConfigListActivity, if (active) R.color.primary else R.color.surface_high)
             )
+            holder.vb.btnPreview.iconTint = ColorStateList.valueOf(
+                ContextCompat.getColor(this@ConfigListActivity, if (active) R.color.on_primary else R.color.on_surface)
+            )
             holder.vb.btnPreview.setOnClickListener { togglePreview(name) }
             holder.vb.btnEdit.setOnClickListener {
                 startActivity(

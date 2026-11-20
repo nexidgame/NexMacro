@@ -98,5 +98,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
         android:contentDescription="@string/cd_add"
-        app:srcCompat="@drawable/ic_add" />
+        app:backgroundTint="@color/primary"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/on_primary" />
 </FrameLayout>

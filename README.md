@@ -9,7 +9,7 @@ Auto clicker & macro modern untuk Android 11 – 16 (`com.nex.macro`).
 - **Konfigurasi** – simpan / muat / perbarui dari overlay, plus layar **Konfigurasi Tersimpan** (lihat di layar 👁, ubah ✏️, salin, hapus, tombol ＋) dan editor konfigurasi: ganti nama, daftar aksi yang bisa diurutkan dengan tarik, ubah posisi/jeda tiap aksi, salin & hapus aksi.
 - **Stop After** 4 pemicu: tanpa batas, setelah N menit, pada jam tertentu, atau setelah N putaran; **Pause On App Change**, **Show Active Targets**, **Target Programmability**.
 - **Auto Start** – pilih aplikasi yang memunculkan overlay (dan opsional langsung mengetuk) saat dibuka.
-- Penghentian darurat saat layar mati, halaman petunjuk, UI gelap modern (Material 3), Bahasa Indonesia & Inggris.
+- Penghentian darurat saat layar mati, halaman petunjuk, UI terang biru lembut (Material 3), overlay agak transparan, Bahasa Indonesia & Inggris.
 
 ## Build
 Butuh JDK 17 dan Android SDK 36.
