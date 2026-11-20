@@ -28,7 +28,12 @@
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:contentDescription="@string/cd_preview"
-        app:icon="@drawable/ic_eye" />
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        app:icon="@drawable/ic_eye"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnEdit"
@@ -37,7 +42,12 @@
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:contentDescription="@string/cd_edit"
-        app:icon="@drawable/ic_edit" />
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        app:icon="@drawable/ic_edit"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCopy"
@@ -46,7 +56,12 @@
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:contentDescription="@string/cd_copy"
-        app:icon="@drawable/ic_copy" />
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        app:icon="@drawable/ic_copy"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnDelete"
@@ -55,7 +70,12 @@
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:contentDescription="@string/cd_delete"
-        app:icon="@drawable/ic_delete" />
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        app:icon="@drawable/ic_delete"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp" />
 
     <ImageView
         android:id="@+id/handle"

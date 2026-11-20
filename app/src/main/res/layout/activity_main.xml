@@ -184,7 +184,12 @@
                         android:layout_height="52dp"
                         android:layout_marginStart="8dp"
                         android:contentDescription="@string/cd_info"
-                        app:icon="@drawable/ic_info" />
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        app:icon="@drawable/ic_info"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="24dp" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnSettingsSingle"
@@ -193,7 +198,12 @@
                         android:layout_height="52dp"
                         android:layout_marginStart="8dp"
                         android:contentDescription="@string/cd_settings"
-                        app:icon="@drawable/ic_settings" />
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        app:icon="@drawable/ic_settings"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -271,7 +281,12 @@
                         android:layout_height="52dp"
                         android:layout_marginStart="8dp"
                         android:contentDescription="@string/cd_info"
-                        app:icon="@drawable/ic_info" />
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        app:icon="@drawable/ic_info"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="24dp" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnSettingsMulti"
@@ -280,7 +295,12 @@
                         android:layout_height="52dp"
                         android:layout_marginStart="8dp"
                         android:contentDescription="@string/cd_settings"
-                        app:icon="@drawable/ic_settings" />
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        app:icon="@drawable/ic_settings"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="24dp" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
